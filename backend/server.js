@@ -17,11 +17,9 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log("✅ MongoDB conectado correctamente"))
+.then(() => console.log("MongoDB conectado correctamente"))
 .catch(err => console.error("Error al conectar MongoDB:", err));
 
-// Rutas de ejemplo
 app.get('/', (req, res) => res.send('API Reflexia funcionando'));
 
-// Levantar servidor
-app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
+export default app;
