@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';  
 
 dotenv.config();
+console.log('DEBUG .env →', process.env.MONGODB_URI);
+
 const app = express();
 app.use(cors());
 app.use(express.json());
